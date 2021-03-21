@@ -1,0 +1,10 @@
+[Unit]
+Description=TTY numlock
+
+[Service]
+ExecStart=/usr/local/bin/numlockTTY
+StandardInput=tty
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

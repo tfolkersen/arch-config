@@ -1,0 +1,27 @@
+.terminator-terminal-window notebook {
+  border: none;
+}
+.terminator-terminal-window notebook tab {
+  background-color: #333333;
+  padding: 0;
+  border: 0;
+  color: #a0a0a0;
+  font-family: jetbrains mono;
+}
+.terminator-terminal-window notebook tab:checked {
+  background-image: none;
+  background-color: #6000ff;
+  padding: 0;
+  border: 0;
+  color: #ffffff;
+}
+.terminator-terminal-window notebook tab button {
+  padding: 0;
+  border: 0;
+}
+
+.terminator-terminal-window notebook tabs {
+  border: none;
+  background-color: #101010;
+}
+

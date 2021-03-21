@@ -1,0 +1,85 @@
+[global_config]
+  tab_position = bottom
+[keybindings]
+  zoom_in = <Super>equal
+  zoom_out = <Super>minus
+  zoom_normal = <Super>BackSpace
+  new_tab = <Super>t
+  cycle_next = Unbound
+  cycle_prev = Unbound
+  go_next = Unbound
+  go_prev = Unbound
+  go_up = <Alt><Super>Up
+  go_down = <Alt><Super>Down
+  go_left = <Alt><Super>Left
+  go_right = <Alt><Super>Right
+  rotate_cw = Unbound
+  rotate_ccw = Unbound
+  split_horiz = <Shift><Super>d
+  split_vert = <Super>d
+  close_term = <Super>w
+  copy = <Super>c
+  paste = <Super>v
+  toggle_scrollbar = Unbound
+  search = Unbound
+  page_up = <Shift>Page_Up
+  page_down = <Shift>Page_Down
+  page_up_half = Page_Up
+  page_down_half = Page_Down
+  line_up = Unbound
+  line_down = Unbound
+  close_window = Unbound
+  resize_up = Unbound
+  resize_down = Unbound
+  resize_left = Unbound
+  resize_right = Unbound
+  move_tab_right = <Shift><Super>Right
+  move_tab_left = <Shift><Super>Left
+  toggle_zoom = Unbound
+  scaled_zoom = Unbound
+  next_tab = <Super>Right
+  prev_tab = <Super>Left
+  reset = Unbound
+  reset_clear = Unbound
+  hide_window = Unbound
+  create_group = Unbound
+  group_all = Unbound
+  group_all_toggle = Unbound
+  ungroup_all = Unbound
+  group_tab = Unbound
+  group_tab_toggle = Unbound
+  ungroup_tab = Unbound
+  new_window = <Super>n
+  new_terminator = Unbound
+  broadcast_off = Unbound
+  broadcast_group = Unbound
+  broadcast_all = Unbound
+  insert_number = Unbound
+  insert_padded = Unbound
+  edit_window_title = Unbound
+  edit_tab_title = Unbound
+  edit_terminal_title = Unbound
+  layout_launcher = Unbound
+  next_profile = Unbound
+  previous_profile = Unbound
+  preferences = Unbound
+  help = Unbound
+[profiles]
+  [[default]]
+    background_darkness = 0.94
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = JetBrains Mono 12
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

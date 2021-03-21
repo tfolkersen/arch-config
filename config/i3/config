@@ -19,7 +19,7 @@ set $ctl Control
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 8
-font pango:jetbrains mono medium 8
+font pango:jetbrains mono medium 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -54,7 +54,7 @@ bindsym $sup+Return exec i3-sensible-terminal
 bindsym $sup+q kill
 
 # start dmenu (a program launcher)
-bindsym $sup+r exec --no-startup-id dmenu_run -fn terminus
+bindsym $sup+r exec --no-startup-id dmenu_run -fn "jetbrains mono medium"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -186,10 +186,20 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	i3bar_command i3bar --transparency
-        status_command i3status
-	colors {
-		background #000080ff
-	}
+        status_command i3blocks
+    colors {
+        background #101010
+        statusline #ffffff
+        separator #666666
+
+        #focused_workspace  #4c7899 #285577 #ffffff
+        focused_workspace  #6040ff #6000ff #ffffff
+        active_workspace   #333333 #5f676a #ffffff
+        inactive_workspace #444444 #333333 #a0a0a0
+        urgent_workspace   #2f343a #900000 #ffffff
+        binding_mode       #2f343a #900000 #ffffff
+    }
+
 	position top
 }
 
@@ -199,7 +209,7 @@ exec picom
 exec dunst
 
 #client.focused #8000ff #400080 #ffffff #2e9ef4 #8000ff
-client.focused #0000ff #000080 #ffffff #0000ff #0000ff
+#client.focused #0000ff #000080 #ffffff #0000ff #0000ff
 
 bindsym $alt+bracketleft gaps inner all plus 5
 bindsym $alt+bracketright gaps inner all minus 5
@@ -207,7 +217,7 @@ bindsym $alt+bracketright gaps inner all minus 5
 bindsym $alt+Shift+bracketleft gaps outer all plus 5
 bindsym $alt+Shift+bracketright gaps outer all minus 5
 
-gaps inner 20
+gaps inner 15
 
 bindsym $sup+backslash --release exec --no-startup-id /usr/bin/scrot -s&
 bindsym $sup+Shift+backslash --release exec scrot
@@ -215,3 +225,12 @@ bindsym $sup+Shift+backslash --release exec scrot
 new_window pixel 1
 
 exec numlockx on
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #6040ff #6040ff #ffffff #6040ff   #6040ff
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #444444 #333333 #888888 #292d2e   #444444
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff

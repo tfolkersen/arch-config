@@ -4,11 +4,11 @@ interval=60
 color=#6040ff
 
 [DISK]
-command=df -h / | awk '/\//{ printf(" Disk:%4s/%s \n", $4, $2) }'
+command=df -h / | awk '/\//{ printf("Disk:%4s/%s\n", $4, $2) }'
 interval=2
 
 [MEM]
-command=free -h | awk '/Mem:/ { printf(" RAM: %5s/%s \n", $3, $2) }'
+command=free -h | awk '/Mem:/ { printf("RAM: %5s/%s\n", $3, $2) }'
 interval=1
 
 [MONTH]

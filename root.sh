@@ -31,7 +31,7 @@ pacman -S --noconfirm alsa-utils mesa\
  noto-fonts terminus-font ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
  firefox vlc
 
-#pacman -S --noconfirm texlive-most texlive-lang biber
+pacman -S --noconfirm texlive-most texlive-lang biber
 
 #pacman -S --noconfirm xorg-bdftopcf xorg-mkfontscale
 

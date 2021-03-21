@@ -27,7 +27,7 @@ timedatectl set-ntp true
 pacman -S --noconfirm alsa-utils mesa\
  xorg-server xorg-xinit xorg-xinput numlockx\
  i3-gaps i3status dmenu thunar dunst feh terminator picom ranger okular scrot i3blocks\
- pinta ueberzug\
+ pinta ueberzug tumbler\
  noto-fonts terminus-font ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
  firefox vlc
 
@@ -44,6 +44,8 @@ systemctl start numlockTTY
 cp evdev /usr/share/X11/xkb/keycodes/evdev
 mkdir -p /etc/X11/xorg.conf.d
 cp cursor-20.conf /etc/X11/xorg.conf.d
+
+echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 echo "Defaults !tty_tickets" >> /etc/sudoers

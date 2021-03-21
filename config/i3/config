@@ -54,7 +54,7 @@ bindsym $sup+Return exec i3-sensible-terminal
 bindsym $sup+q kill
 
 # start dmenu (a program launcher)
-bindsym $sup+r exec --no-startup-id dmenu_run -fn "jetbrains mono medium"
+bindsym $sup+r exec --no-startup-id dmenu_run -fn "jetbrains mono medium" -sb "#6000ff"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -195,7 +195,7 @@ bar {
 	i3bar_command i3bar --transparency
         status_command i3blocks
     colors {
-        background #101010
+        background #000000
         statusline #ffffff
         separator #666666
 

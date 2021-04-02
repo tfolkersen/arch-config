@@ -49,3 +49,14 @@ cleanhistory() {
 	rm ~/.bash_history
 	history -cw
 }
+
+sc() {
+	vim ~/Desktop/scratch.txt
+}
+
+alias gstat="git status"
+alias gb="git branch"
+alias gcom="git commit"
+
+
+

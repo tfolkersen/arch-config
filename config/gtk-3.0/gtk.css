@@ -26,7 +26,7 @@
 }
 
 .terminator-terminal-window tab {
-  box-shadow: inset 0 4px #606060
+  box-shadow: inset 0 4px #606060;
 }
 
 .terminator-terminal-window tab:checked {
@@ -34,9 +34,9 @@
 }
 
 .terminator-terminal-window tab:checked button {
-  color: #8040ff
+  color: #8040ff;
 }
 
 .terminator-terminal-window tab button {
-  color: #606060
+  color: #606060;
 }

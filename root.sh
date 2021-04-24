@@ -28,7 +28,7 @@ pacman -S --noconfirm alsa-utils mesa\
  xorg-server xorg-xinit xorg-xinput numlockx\
  i3-gaps i3status dmenu thunar dunst feh terminator picom ranger okular scrot i3blocks\
  pinta ueberzug tumbler\
- noto-fonts terminus-font ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
+ noto-fonts noto-fonts-cjk terminus-font ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
  firefox vlc
 
 pacman -S --noconfirm texlive-most texlive-lang biber

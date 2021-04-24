@@ -72,7 +72,7 @@
     font = JetBrains Mono 12
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#2020ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
     use_system_font = False
 [layouts]
   [[default]]

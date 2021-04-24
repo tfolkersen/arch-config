@@ -26,7 +26,7 @@
 }
 
 .terminator-terminal-window tab {
-  box-shadow: inset 0 4px #606060;
+  /*box-shadow: inset 0 4px #606060;*/
 }
 
 .terminator-terminal-window tab:checked {

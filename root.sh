@@ -45,6 +45,10 @@ cp evdev /usr/share/X11/xkb/keycodes/evdev
 mkdir -p /etc/X11/xorg.conf.d
 cp cursor-20.conf /etc/X11/xorg.conf.d
 
+mkdir -p /usr/share/i3blocksScripts
+cp i3blocksScripts/* /usr/share/i3blocksScripts
+chmod +x /usr/share/i3blocksScripts/*
+
 echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers

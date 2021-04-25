@@ -16,7 +16,7 @@ command=date +"%F"
 interval=1
 
 [VOLUME]
-command=awk -F"[][]" '/dB/ { print $2 }' <(amixer -M sget Master)
+command=sh /usr/share/i3blocksScripts/volumeDisplay.sh
 interval=1
 signal=2
 color=#9070ff
@@ -25,4 +25,3 @@ color=#9070ff
 command=date +"%r"
 interval=1
 color=#00ffff
-

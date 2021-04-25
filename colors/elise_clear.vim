@@ -66,9 +66,9 @@ if v:version >= 700
 
   " Tab colors {{{2
   if has("windows")
-    hi TabLine ctermbg=DarkYellow ctermfg=None cterm=NONE guibg=Gray20 guifg=#ffcc66 gui=none
-    hi TabLineFill ctermbg=DarkYellow ctermfg=None cterm=NONE guibg=Gray20 guifg=#ffcc66 gui=none
-    hi TabLineSel ctermbg=DarkBlue ctermfg=fg cterm=NONE guibg=#ffcc66 guifg=Gray20 gui=bold
+    hi TabLine ctermbg=DarkGray ctermfg=White cterm=NONE guibg=Gray20 guifg=#ffcc66 gui=none
+    hi TabLineFill ctermbg=Black ctermfg=None cterm=NONE guibg=Gray20 guifg=#ffcc66 gui=none
+    hi TabLineSel ctermbg=Magenta ctermfg=White cterm=NONE guibg=#ffcc66 guifg=Gray20 gui=bold
   endif
 
   " Spell checking colors {{{2

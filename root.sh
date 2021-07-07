@@ -29,7 +29,7 @@ pacman -S --noconfirm alsa-utils mesa\
  i3-gaps i3status dmenu thunar dunst feh terminator picom ranger okular scrot i3blocks\
  pinta ueberzug tumbler\
  noto-fonts noto-fonts-cjk terminus-font ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
- firefox vlc
+ firefox vlc xfce4
 
 pacman -S --noconfirm texlive-most texlive-lang biber
 
@@ -56,15 +56,19 @@ echo "Defaults !tty_tickets" >> /etc/sudoers
 
 mkdir /var/shared
 groupadd shared
-chgrp -R shared /var/shared
-chmod -R 2775 /var/shared
-
 
 for user in ${usernames[@]}
 do
 	useradd -m -G wheel $user
 	usermod -a -G shared $user
 done
+
+git clone https://github.com/grassmunk/Chicago95.git
+mv Chicago95 /var/shared
+
+chgrp -R shared /var/shared
+chmod -R 2775 /var/shared
+
 
 for i in $(seq 0 $(($usercount - 1)))
 do

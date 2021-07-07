@@ -29,7 +29,7 @@ pacman -S --noconfirm alsa-utils mesa\
  i3-gaps i3status dmenu thunar dunst feh terminator picom ranger okular scrot i3blocks\
  pinta ueberzug tumbler\
  noto-fonts noto-fonts-cjk terminus-font ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
- firefox vlc xfce4
+ firefox vlc xfce4 xfce4-goodies
 
 pacman -S --noconfirm texlive-most texlive-lang biber
 

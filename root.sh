@@ -29,7 +29,7 @@ pacman -S --noconfirm alsa-utils mesa\
  i3-gaps i3status dmenu thunar dunst feh terminator picom ranger okular scrot i3blocks\
  pinta ueberzug tumbler\
  noto-fonts noto-fonts-cjk terminus-font ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
- firefox vlc xfce4 xfce4-goodies xscreensaver
+ firefox vlc xfce4 xfce4-goodies
 
 pacman -S --noconfirm texlive-most texlive-lang biber
 
@@ -100,6 +100,10 @@ do
 	mkdir $home/Desktop
 	mkdir $home/Downloads
 	mkdir $home/Documents
+
+	#### Virtualbox
+	#cp resolution.sh $home
+	#chmod +x $home/resolution.sh
 
 	#c1=${colors[2 * i]}
 	#c2=${colors[2 * i + 1]}

@@ -5,20 +5,20 @@
 row=0
 col=0
 
-[/home/athena/Desktop/res.sh]
-row=0
-col=1
-
-[234487b2-ef3a-4c25-b26d-9dbaed7c2183]
-row=2
+[/home/athena/Desktop/resolution.sh]
+row=6
 col=0
 
-[6e8b8eab-03c2-4a86-8318-fcd13929e63c]
-row=1
-col=1
+[4dd3fb19-1d89-4038-993d-9b306e8eed76]
+row=5
+col=0
 
-[69e15092-9057-496c-bb7f-3ace380a4e06]
+[4c9a00cd-1d99-4742-8142-0eeb0aa8b2bc]
 row=1
+col=0
+
+[95838c2f-b977-4c56-9197-95dbc38940a0]
+row=2
 col=0
 
 [/]

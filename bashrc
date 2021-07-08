@@ -17,6 +17,7 @@ alias ib="vim ~/.config/i3blocks/config"
 alias des="cd ~/Desktop && clear && ls"
 alias dow="cd ~/Downloads && clear && ls"
 alias doc="cd ~/Documents && clear && ls"
+alias shr="cd ~/shared && clear && ls"
 
 alias clr="clear"
 alias cls="clear && ls"

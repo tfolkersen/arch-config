@@ -64,7 +64,11 @@ do
 done
 
 git clone https://github.com/grassmunk/Chicago95.git
-mv Chicago95 /var/shared
+mkdir -p /usr/share/themes
+mkdir -p /usr/share/icons
+cp -r Chicago95/Theme/Chicago95 /usr/share/themes
+cp -r Chicago95/Icons/* /usr/share/icons
+#mv Chicago95 /var/shared
 
 chgrp -R shared /var/shared
 chmod -R 2775 /var/shared

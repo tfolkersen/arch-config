@@ -1,6 +1,6 @@
-hostname="neptune"
+hostname="hostname"
 
-usernames=(root athena nyx willow)
+usernames=(root user1 user2)
 #colors=("ff0000" "800000" "0000ff" "000080" "8000ff" "400080")
 usercount=${#usernames[@]}
 
@@ -9,7 +9,7 @@ usercount=${#usernames[@]}
 timedatectl set-ntp true
 
 pacman -S --noconfirm rsync reflector
-reflector --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
+reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 pacman -Syyu --noconfirm
 pacman -S --noconfirm vim man git gcc python3 make cmake sed unzip neofetch
 
@@ -31,7 +31,7 @@ pacman -S --noconfirm alsa-utils mesa\
  noto-fonts noto-fonts-cjk terminus-font ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
  firefox vlc xfce4 xfce4-goodies
 
-#pacman -S --noconfirm texlive-most texlive-lang biber
+pacman -S --noconfirm texlive-most texlive-lang biber
 
 #pacman -S --noconfirm xorg-bdftopcf xorg-mkfontscale
 
@@ -42,8 +42,8 @@ systemctl enable numlockTTY
 systemctl start numlockTTY
 
 cp evdev /usr/share/X11/xkb/keycodes/evdev
-#mkdir -p /etc/X11/xorg.conf.d
-#cp cursor-20.conf /etc/X11/xorg.conf.d
+mkdir -p /etc/X11/xorg.conf.d
+cp cursor-20.conf /etc/X11/xorg.conf.d
 
 mkdir -p /usr/share/i3blocksScripts
 cp i3blocksScripts/* /usr/share/i3blocksScripts

@@ -65,6 +65,8 @@ done
 
 git clone https://github.com/grassmunk/Chicago95.git
 
+sed -i "s/@define-color xfd_icon_backdrop #008081;/#@define-color xfd_icon_backdrop #008081;/g" Chicago95/Theme/Chicago95/gtk-3.24/gtk.css
+
 mkdir -p /usr/share/themes/
 mkdir -p /usr/share/icons
 cp -r Chicago95/Theme/Chicago95 /usr/share/themes

@@ -65,8 +65,6 @@ done
 
 git clone https://github.com/grassmunk/Chicago95.git
 
-sed -i "s/@define-color xfd_icon_backdrop #008081;/\/*@define-color xfd_icon_backdrop #008081;*\//g" Chicago95/Theme/Chicago95/gtk-3.24/gtk.css
-
 mkdir -p /usr/share/themes/
 mkdir -p /usr/share/icons
 cp -r Chicago95/Theme/Chicago95 /usr/share/themes
@@ -109,8 +107,6 @@ do
 	mkdir $home/Downloads
 	mkdir $home/Documents
 
-	mkdir -p $home/.config/gtk-3.0
-	cp Chicago95/Extras/override/gtk-3.24/gtk.css $home/.config/gtk-3.0/
 	mkdir -p $home/.local/share/sounds
 	cp -r Chicago95/sounds/Chicago95 $home/.local/share/sounds
 	

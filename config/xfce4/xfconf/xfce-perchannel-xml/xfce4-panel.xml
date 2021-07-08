@@ -27,7 +27,7 @@
   </property>
   <property name="plugins" type="empty">
     <property name="plugin-1" type="string" value="applicationsmenu">
-      <property name="button-icon" type="string" value="/var/shared/Chicago95/Theme/Chicago95/misc/windows.png"/>
+      <property name="button-icon" type="string" value="/usr/share/themes/Chicago95/misc/windows.png"/>
       <property name="button-title" type="string" value="Start"/>
     </property>
     <property name="plugin-2" type="string" value="tasklist">

@@ -64,10 +64,16 @@ do
 done
 
 git clone https://github.com/grassmunk/Chicago95.git
-mv Chicago95 /var/shared
 
-chgrp -R shared /var/shared
-chmod -R 2775 /var/shared
+mkdir -p /usr/share/themes/
+mkdir -p /usr/share/icons
+cp -r Chicago95/Theme/Chicago95 /usr/share/themes
+cp -r Chicago95/Icons/* /usr/share/icons
+cp -r Chicago95/Cursors/* /usr/share/icons
+
+mkdir -p /usr/share/fonts/truetype
+cp -r Chicago95/Fonts/* /usr/share/fonts/truetype
+fc-cache -f -v
 
 
 for i in $(seq 0 $(($usercount - 1)))
@@ -101,6 +107,12 @@ do
 	mkdir $home/Downloads
 	mkdir $home/Documents
 
+	mkdir -p $home/.config/gtk-3.0
+	cp Chicago95/Extras/override/gtk-3.24/gtk.css $home/.config/gtk-3.0/
+	mkdir -p $home/.local/share/sounds
+	cp -r Chicago95/sounds/Chicago95 $home/.local/share/sounds
+	
+
 	#### Virtualbox
 	#cp resolution.sh $home
 	#chmod +x $home/resolution.sh
@@ -115,3 +127,9 @@ do
 
 	chown -R $user $home
 done
+
+#mv Chicago95 /var/shared
+rm -rf Chicago95
+chgrp -R shared /var/shared
+chmod -R 2775 /var/shared
+

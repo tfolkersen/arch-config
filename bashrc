@@ -44,6 +44,7 @@ alias vimr="vim ~/.vimrc"
 alias todo="vim ~/Desktop/todo.txt +\"color default\""
 alias vimc="cd ~/.vim/colors"
 alias ka="killall $@"
+alias vol="sh /usr/share/i3blocksScripts/volumeDisplay.sh"
 
 cleanhistory() {
 	rm ~/.viminfo

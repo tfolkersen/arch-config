@@ -1,20 +1,16 @@
 [xfdesktop-version-4.10.3+-rcfile_format]
 4.10.3+=true
 
-[/home/athena/Desktop/arch-config]
-row=0
-col=1
-
-[4dd3fb19-1d89-4038-993d-9b306e8eed76]
-row=0
-col=0
-
-[4c9a00cd-1d99-4742-8142-0eeb0aa8b2bc]
-row=1
-col=0
-
-[95838c2f-b977-4c56-9197-95dbc38940a0]
+[11546c4e-3e98-46e1-a6c6-1eec1129239a]
 row=2
+col=0
+
+[42f73759-33fa-4f15-a0b8-8b8c4a2ff601]
+row=0
+col=0
+
+[3f382328-9718-40e5-9452-73c9ce242733]
+row=1
 col=0
 
 [/]

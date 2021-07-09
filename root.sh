@@ -101,6 +101,9 @@ do
 	cp xinputStuff $home/.xinputStuff
 	chmod +x $home/.xinputStuff
 
+	cp xfceStuff $home/.xfceStuff
+	chmod +x $home/.xfceStuff
+
 	cp -r config $home/.config
 
 	mkdir $home/Desktop

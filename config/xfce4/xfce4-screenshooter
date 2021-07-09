@@ -1,7 +1,7 @@
 app=feh
 last_user=
 last_extension=png
-screenshot_dir=file:///home/athena
+screenshot_dir=file:///home/USERNAMEGOESHERE
 enable_imgur_upload=true
 action=1
 delay=0

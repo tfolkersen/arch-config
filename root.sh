@@ -1,9 +1,14 @@
+pacman -S --noconfirm virtualbox-guest-utils git
+systemctl enable NetworkManager
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+
+
 hostname="c680vbox"
 
 usernames=(root user1)
 #colors=("ff0000" "800000" "0000ff" "000080" "8000ff" "400080")
 usercount=${#usernames[@]}
-
 
 
 timedatectl set-ntp true
@@ -135,3 +140,6 @@ rm -rf Chicago95
 chgrp -R shared /var/shared
 chmod -R 2775 /var/shared
 
+echo "Change root's password by typing \"passwd\""
+echo "Then change user1's password by typing \"passwd user1\""
+echo "Then restart by typing \"shutdown -r now\""

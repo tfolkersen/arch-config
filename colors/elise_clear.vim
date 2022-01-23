@@ -116,13 +116,13 @@ hi NonText ctermbg=None ctermfg=DarkGray guibg=bg guifg=DarkGray gui=none
 hi SpecialKey ctermbg=None ctermfg=DarkCyan guibg=bg guifg=DarkCyan gui=none
 
 " Window Bars, Status line & Visual mode colors {{{1
-hi StatusLine ctermbg=DarkBlue ctermfg=fg cterm=NONE guibg=#ffcc66 guifg=bg gui=none
+hi StatusLine ctermbg=Magenta ctermfg=White cterm=NONE guibg=#ffcc66 guifg=bg gui=none
 if has("windows")
-  hi StatusLineNC ctermbg=DarkYellow ctermfg=None cterm=NONE guibg=Gray20 guifg=#ffcc66 gui=none
+  hi StatusLineNC ctermbg=DarkGrey ctermfg=White cterm=NONE guibg=Gray20 guifg=#ffcc66 gui=none
 endif
 
 if has("vertsplit")
-  hi VertSplit ctermbg=DarkYellow ctermfg=None cterm=NONE guibg=Gray20 guifg=#ffcc66 gui=none
+  hi VertSplit ctermbg=DarkGray ctermfg=White cterm=NONE guibg=Gray20 guifg=#ffcc66 gui=none
 endif
 
 if has("wildmenu")

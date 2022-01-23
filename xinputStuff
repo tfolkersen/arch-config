@@ -1,2 +1,3 @@
-xinput --set-prop "Glorious Model D" 299 0, 0
-xinput --set-prop "Glorious Model D" 152 0.5 0 0 0 0.5 0 0 0 1
+xinput --set-prop "Glorious Model D" 302 0, 0
+xinput --set-prop "Glorious Model D" 154 0.5 0 0 0 0.5 0 0 0 1
+xset r rate 250 50

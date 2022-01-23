@@ -76,4 +76,78 @@ class wall(Command):
         def tab(self, tabnum):
             return self._tab_directory_content()
 
-            
+
+we4Path = "/home/user1/Desktop/C274.Fall.2021.TAs.Only/Taylor/WE4"
+
+#Grade a submission
+class g(Command):
+    def execute(self):
+        if self.arg(1):
+            target = self.rest(1)
+        else:
+            target = self.fm.thisfile.path
+        
+
+        self.fm.execute_console("shell python3 " + we4Path + "/grade.py " + target)
+        
+
+
+class gradeTxt(Command):
+    def execute(self):
+        if self.arg(1):
+            target = self.rest(1)
+        else:
+            target = self.fm.thisfile.path
+
+        os.system("cp " + we4Path + "/grade.txt " + target)
+        
+    
+
+class rj(Command):
+    def execute(self):
+        if self.arg(1):
+            target = self.rest(1)
+        else:
+            target = self.fm.thisfile.path
+
+        os.system("rm *.jpg")
+        
+
+class q1(Command):
+    def execute(self):
+        if self.arg(1):
+            target = self.rest(1)
+        else:
+            target = self.fm.thisfile.path
+
+        os.system("python3 q1.py")
+
+class ff(Command):
+        def execute(self):
+            if self.arg(1):
+                target = self.rest(1)
+            else:
+                target = self.fm.thisfile.path
+
+            target = "\"" + target + "\""
+
+            os.system("firefox --new-tab " + target + "& > /dev/null")
+
+class uz(Command):
+    def execute(self):
+        if self.arg(1):
+            target = self.rest(1)
+        else:
+            target = self.fm.thisfile.path
+
+        os.system("unzip \"" + target + "\"")
+
+class ut(Command):
+    def execute(self):
+        if self.arg(1):
+            target = self.rest(1)
+        else:
+            target = self.fm.thisfile.path
+
+        os.system("tar xvf \"" + target + "\"")
+

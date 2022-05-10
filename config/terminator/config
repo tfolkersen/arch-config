@@ -66,7 +66,7 @@
   help = Unbound
 [profiles]
   [[default]]
-    background_darkness = 0.80
+    background_darkness = 0.84
     background_type = transparent
     cursor_color = "#aaaaaa"
     font = JetBrains Mono 12

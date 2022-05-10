@@ -105,7 +105,8 @@ do
 	chmod +x $home/.xfceStuff
 
 	cp -r config $home/.config
-	find $home/.config -type f -exec sed -i "s/USERNAMEGOESHERE/"$user"/g" {} +
+	#find $home/.config -type f -exec sed -i "s/USERNAMEGOESHERE/"$user"/g" {} +
+	find $home -type f -exec sed -i "s/USERNAMEGOESHERE/"$user"/g" {} +
 
 	mkdir $home/Desktop
 	mkdir $home/Downloads

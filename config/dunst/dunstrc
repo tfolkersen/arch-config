@@ -298,8 +298,9 @@
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
+#originally 285577
 [urgency_normal]
-    background = "#285577"
+    background = "#444444"
     foreground = "#ffffff"
     timeout = 6
     # Icon for notifications with normal urgency, uncomment to enable

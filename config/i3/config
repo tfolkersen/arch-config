@@ -232,6 +232,7 @@ exec sh ~/.xinputStuff
 exec sh ~/.fehbg
 exec picom
 exec dunst
+exec ~/shared/animated.sh
 
 #client.focused #8000ff #400080 #ffffff #2e9ef4 #8000ff
 #client.focused #0000ff #000080 #ffffff #0000ff #0000ff

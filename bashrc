@@ -77,6 +77,7 @@ cleanhistory() {
     rm -rf ~/.cache
     rm ~/.lesshst
     rm ~/.rangerExit
+    rm ~/.python_history
 	history -cw
 }
 
@@ -88,19 +89,16 @@ alias gstat="git status"
 alias gb="git branch"
 alias gcom="git commit"
 
-
-export PATH=/home/user1/VSCode-linux-x64/bin:$PATH
-export PATH=/home/user1/Games/execScripts:$PATH
+export PATH=/home/USERNAMEGOESHERE/VSCode-linux-x64/bin:$PATH
+export PATH=/home/USERNAMEGOESHERE/Games/execScripts:$PATH
 
 
 rwall () {
     feh --randomize --bg-fill ~/shared/random*
 }
 
-
 alias ohaton="ssh ohaton"
-alias proc="ps -U user1"
-
+alias proc="ps -U USERNAMEGOESHERE"
 
 alias xin="sh ~/.xinputStuff"
 alias sls="screen -ls $@"

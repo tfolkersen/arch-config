@@ -54,7 +54,9 @@ echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 echo "Defaults !tty_tickets" >> /etc/sudoers
 
-mkdir /var/shared
+#mkdir /var/shared
+mkdir /home/Shared
+
 groupadd shared
 
 for user in ${usernames[@]}
@@ -126,13 +128,13 @@ do
 	#sed -i "s/#0000ff/#"$c1"/g" $home/.config/i3/config
 	#sed -i "s/#000080/#"$c2"/g" $home/.config/i3/config
 
-	ln -fs /var/shared $home/shared
+	ln -fs /home/Shared $home/shared
 
 	chown -R $user $home
 done
 
 #mv Chicago95 /var/shared
 rm -rf Chicago95
-chgrp -R shared /var/shared
-chmod -R 2775 /var/shared
+chgrp -R shared /home/Shared
+chmod -R 2775 /home/Shared
 

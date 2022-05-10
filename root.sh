@@ -24,6 +24,8 @@ locale-gen
 timedatectl set-local-rtc true
 timedatectl set-ntp true
 
+pacman -S --noconfirm archlinux-keyring
+
 pacman -S --noconfirm alsa-utils mesa\
  xorg-server xorg-xinit xorg-xinput numlockx\
  i3-gaps i3status dmenu thunar dunst feh terminator kitty picom ranger okular scrot i3blocks\

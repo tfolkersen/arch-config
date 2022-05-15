@@ -1,0 +1,6 @@
+~button2
+    echo -n | xsel -n -i
+~control + c
+    echo -n | xsel -n -i
+~control + x
+    echo -n | xsel -n -i

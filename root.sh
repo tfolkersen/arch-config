@@ -11,7 +11,7 @@ timedatectl set-ntp true
 pacman -S --noconfirm rsync reflector
 reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 pacman -Syyu --noconfirm
-pacman -S --noconfirm vim man git gcc python3 make cmake sed unzip neofetch
+pacman -S --noconfirm vim man git gcc python3 make cmake sed unzip neofetch openssh
 
 echo $hostname > /etc/hostname
 

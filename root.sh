@@ -110,7 +110,7 @@ do
 
 	cp -r config $home/.config
 
-    cp gtkrc-2.0 $home/.gtkrc-2.0
+    	cp gtkrc-2.0 $home/.gtkrc-2.0
 	#find $home/.config -type f -exec sed -i "s/USERNAMEGOESHERE/"$user"/g" {} +
 	find $home -type f -exec sed -i "s/USERNAMEGOESHERE/"$user"/g" {} +
 

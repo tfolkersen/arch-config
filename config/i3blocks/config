@@ -4,7 +4,7 @@ interval=60
 color=#6040ff
 
 [DISK]
-command=df -h / | awk '/\//{ printf("Disk:%4s/%s\n", $4, $2) }'
+command=df -h | awk '/home/{ printf("Disk: %4s/%s\n", $4, $2) }'
 interval=2
 
 [MEM]

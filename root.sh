@@ -47,6 +47,8 @@ cp evdev /usr/share/X11/xkb/keycodes/evdev
 mkdir -p /etc/X11/xorg.conf.d
 cp cursor-20.conf /etc/X11/xorg.conf.d
 
+cp asound.conf /etc/asound.conf
+
 mkdir -p /usr/share/i3blocksScripts
 cp i3blocksScripts/* /usr/share/i3blocksScripts
 chmod +x /usr/share/i3blocksScripts/*
@@ -110,7 +112,7 @@ do
 
 	cp -r config $home/.config
 
-    	cp gtkrc-2.0 $home/.gtkrc-2.0
+    cp gtkrc-2.0 $home/.gtkrc-2.0
 	#find $home/.config -type f -exec sed -i "s/USERNAMEGOESHERE/"$user"/g" {} +
 	find $home -type f -exec sed -i "s/USERNAMEGOESHERE/"$user"/g" {} +
 

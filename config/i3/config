@@ -251,7 +251,7 @@ bindsym $sup+Shift+backslash --release exec scrot
 new_window pixel 1
 
 exec numlockx on
-exec pulseaudio -D
+exec start-pulseaudio-x11
 exec sxhkd
 
 

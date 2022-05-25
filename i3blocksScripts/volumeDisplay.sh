@@ -4,9 +4,10 @@ func() {
 
     if [ "$m" == "[off]" ];
     then
-        vol="["$vol"]"
+        echo "["$vol"]"
+    else
+        echo " "$vol" "
     fi
-    echo $vol
 }
 
 func

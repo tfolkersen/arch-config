@@ -11,6 +11,8 @@ cd lib32-nvidia-470xx-utils
 makepkg -si --noconfirm
 cd ..
 
+mkdir -p /etc/X11/xorg.conf.d
+cp 20-nvidia.conf /etc/X11/xorg.conf.d
 
 
 

@@ -122,6 +122,8 @@ do
 
 	mkdir -p $home/.local/share/sounds
 	cp -r Chicago95/sounds/Chicago95 $home/.local/share/sounds
+
+    cp Xresources $home/.Xresources
 	
 
 	#### Virtualbox
@@ -144,3 +146,5 @@ rm -rf Chicago95
 chgrp -R shared /home/Shared
 chmod -R 2775 /home/Shared
 
+### GRAPHICS
+#sh graphics.sh

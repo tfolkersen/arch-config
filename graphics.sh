@@ -29,5 +29,5 @@ cd ..
 sudo mkdir -p /etc/X11/xorg.conf.d
 sudo cp 20-nvidia.conf /etc/X11/xorg.conf.d
 
-sudo sed "s/MODULES=()$/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/g" /etc/mkinitcpio.conf
+sudo sed -i "s/MODULES=()$/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/g" /etc/mkinitcpio.conf
 sudo mkinitcpio -P linux

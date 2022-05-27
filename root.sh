@@ -1,9 +1,12 @@
+#!/bin/bash
+
 hostname="hostname"
 
-usernames=(root user1 user2)
-#colors=("ff0000" "800000" "0000ff" "000080" "8000ff" "400080")
-usercount=${#usernames[@]}
-
+usercount=0
+while read line
+do
+    usercount=$(($usercount + 1))
+done < users
 
 
 timedatectl set-ntp true
@@ -63,11 +66,11 @@ mkdir /home/Shared
 
 groupadd shared
 
-for user in ${usernames[@]}
+while read user
 do
 	useradd -m -G wheel $user
 	usermod -a -G shared $user
-done
+done < users
 
 git clone https://github.com/grassmunk/Chicago95.git
 
@@ -82,9 +85,9 @@ cp -r Chicago95/Fonts/* /usr/share/fonts/truetype
 fc-cache -f -v
 
 
-for i in $(seq 0 $(($usercount - 1)))
+i=0
+while read user
 do
-	user=${usernames[i]}
 	home=/home/$user
 
 	if [ $i == 0 ]
@@ -130,16 +133,12 @@ do
 	#cp resolution.sh $home
 	#chmod +x $home/resolution.sh
 
-	#c1=${colors[2 * i]}
-	#c2=${colors[2 * i + 1]}
-
-	#sed -i "s/#0000ff/#"$c1"/g" $home/.config/i3/config
-	#sed -i "s/#000080/#"$c2"/g" $home/.config/i3/config
 
 	ln -fs /home/Shared $home/shared
 
 	chown -R $user $home
-done
+    i=$(($i + 1))
+done < users
 
 #mv Chicago95 /var/shared
 rm -rf Chicago95

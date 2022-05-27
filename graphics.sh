@@ -10,6 +10,7 @@ do
 		home=/$user
 	fi
     sudo sed -i "s/154/155/g" $home/.xinputStuff
+    sudo chown $user $home/.xinputStuff
 
 
     i=$(($i + 1))

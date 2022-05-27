@@ -117,33 +117,33 @@ if fileList[-1] is None:
 
 command = "vim "
 
-    
-firstAdditional = True
+
 for i in range(len(fileList)):
     f = fileList[i]
+    f2 = False if i + 1 >= len(fileList) else fileList[i + 1]
+
+    if f is None:
+        continue
 
     if i == 0:
         command += f
-        if len(fileList) > 1:
+        if not f2 == False:
             command += " +\""
+    
     else:
-        if firstAdditional:
-            if f is None:
-                command += "tabnew "
-            else:
-                command += "vsplit " + f
-            firstAdditional = False
-        
-        elif f is None:
-            command += " | tabnew "
-        else:
+        if not (f is None or f == False):
             command += f
-            nextToken = False if i == len(fileList) - 1 else fileList[i + 1]
-            if nextToken == False:
-                command += " | tabnext\""
-            else:
-                if not nextToken is None:
-                    command += " | vsplit "
+
+    sep = "" if i == 0 else " | "
+
+    if f2 is None:
+        command += sep + "tabnew "
+    elif not f2 == False:
+        command += sep + "vsplit "
+    else:
+        if i > 0:
+            command += " | tabnext\""
+
 
 
 outCommand(command)

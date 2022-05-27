@@ -92,6 +92,10 @@ alias gcom="git commit"
 export PATH=/home/USERNAMEGOESHERE/VSCode-linux-x64/bin:$PATH
 export PATH=/home/USERNAMEGOESHERE/Games/execScripts:$PATH
 
+vom () {
+    com=$(python3 ~/scripts/vimOpen.py $@)
+    eval $com
+}
 
 rwall () {
     feh --randomize --bg-fill ~/shared/random*

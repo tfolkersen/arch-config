@@ -2,13 +2,6 @@
 
 hostname="hostname"
 
-usercount=0
-while read line
-do
-    usercount=$(($usercount + 1))
-done < users
-
-
 timedatectl set-ntp true
 
 pacman -S --noconfirm rsync reflector

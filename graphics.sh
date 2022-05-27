@@ -1,5 +1,21 @@
 sudo -v
 
+i=0
+while read user
+do
+    home=/home/$user
+
+	if [ $i == 0 ]
+	then
+		home=/$user
+	fi
+	#find $home/.config -type f -exec sed -i "s/USERNAMEGOESHERE/"$user"/g" {} +
+    sudo sed -i "s/154/155/g" $home/.xinputStuff
+
+
+    i=$(($i + 1))
+done < users
+
 git clone https://aur.archlinux.org/nvidia-470xx-utils.git
 git clone https://aur.archlinux.org/lib32-nvidia-470xx-utils.git
 
@@ -13,6 +29,3 @@ cd ..
 
 sudo mkdir -p /etc/X11/xorg.conf.d
 sudo cp 20-nvidia.conf /etc/X11/xorg.conf.d
-
-
-

@@ -82,7 +82,8 @@ if len(currentGroup) > 0:
     currentGroup = []
 
 
-files = os.listdir()
+files = sorted(os.listdir())
+
 
 files2 = {}
 for f in files:
@@ -105,6 +106,7 @@ for root in files2:
     fileList.append(None)
 
 
+
 if len(fileList) == 0:
     outCommand("vim")
     exit()
@@ -116,7 +118,7 @@ if fileList[-1] is None:
 command = "vim "
 
     
-firstNone = True
+firstAdditional = True
 for i in range(len(fileList)):
     f = fileList[i]
 
@@ -125,12 +127,15 @@ for i in range(len(fileList)):
         if len(fileList) > 1:
             command += " +\""
     else:
-        if f is None:
-            if firstNone:
-                command += " tabnew "
-                firstNone = False
+        if firstAdditional:
+            if f is None:
+                command += "tabnew "
             else:
-                command += " | tabnew "
+                command += "vsplit " + f
+            firstAdditional = False
+        
+        elif f is None:
+            command += " | tabnew "
         else:
             command += f
             nextToken = False if i == len(fileList) - 1 else fileList[i + 1]

@@ -107,6 +107,8 @@ do
 	chmod +x $home/.xfceStuff
 
 	cp -r config $home/.config
+	
+	cp -r scripts $home/scripts
 
     cp gtkrc-2.0 $home/.gtkrc-2.0
 	#find $home/.config -type f -exec sed -i "s/USERNAMEGOESHERE/"$user"/g" {} +

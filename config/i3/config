@@ -253,6 +253,7 @@ new_window pixel 1
 exec numlockx on
 exec start-pulseaudio-x11
 exec sxhkd
+exec thunar --daemon
 
 
 

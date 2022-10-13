@@ -267,3 +267,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 #6040ff and 6000ff
+
+default_border pixel 1
+default_floating_border pixel 1
+for_window [class="^.*"] border pixel 1

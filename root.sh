@@ -156,6 +156,11 @@ chmod -R 2775 /home/Shared
 
 
 ##### LAPTOP
-pacman -S bluez bluez-utils light powertop
-systemctl enable bluetooth
-systemctl start bluetooth
+if [ $LAPTOP == 1 ]; then
+    pacman -S bluez bluez-utils light powertop
+    systemctl enable bluetooth
+    systemctl start bluetooth
+    git clone https://aur.archlinux.org/mons.git
+    git clone https://aur.archlinux.org/auto-cpufreq.git
+fi
+

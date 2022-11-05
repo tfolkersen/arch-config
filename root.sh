@@ -58,11 +58,13 @@ echo "Defaults !tty_tickets" >> /etc/sudoers
 mkdir /home/Shared
 
 groupadd shared
+groupadd video
 
 while read user
 do
 	useradd -m -G wheel $user
 	usermod -a -G shared $user
+    usermod -a -G video $user
 done < users
 
 git clone https://github.com/grassmunk/Chicago95.git
@@ -148,6 +150,6 @@ chmod -R 2775 /home/Shared
 
 
 ##### LAPTOP
-pacman -S bluez bluez-utils
+pacman -S bluez bluez-utils light powertop
 systemctl enable bluetooth
 systemctl start bluetooth

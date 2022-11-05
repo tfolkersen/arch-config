@@ -3,6 +3,13 @@ command='whoami'
 interval=60
 color=#6040ff
 
+##[BRIGHTNESS]
+##command=sh /usr/share/i3blocksScripts/brightnessDisplay.sh
+##interval=1
+##color=#ff00ff
+##signal=3
+##color=#ffff00
+
 [DISK]
 command=df -h | awk '/home/{ printf("Disk: %4s/%s\n", $4, $2) }'
 interval=2
@@ -25,3 +32,10 @@ color=#9070ff
 command=date +"%r"
 interval=1
 color=#00ffff
+
+##[BATTERY]
+##command=sh /usr/share/i3blocksScripts/batteryDisplay.sh
+##interval=1
+##color=#ff00ff
+
+

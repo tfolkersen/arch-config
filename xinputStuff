@@ -1,3 +1,9 @@
-xinput --set-prop "Glorious Model D" 301 0, 0
-xinput --set-prop "Glorious Model D" 154 0.5 0 0 0 0.5 0 0 0 1
 xset r rate 250 50
+
+##DESKTOP##xinput --set-prop "Glorious Model D" 301 0, 0
+##DESKTOP##xinput --set-prop "Glorious Model D" 154 0.5 0 0 0 0.5 0 0 0 1
+
+##LAPTOP##xinput --set-prop "SYNA801A:00 06CB:CEC6 Touchpad" "Coordinate Transformation Matrix" 1.75 0 0 0 1.75 0 0 0 1
+##LAPTOP##xinput --set-prop "SYNA801A:00 06CB:CEC6 Touchpad" "libinput Tapping Enabled" 1
+##LAPTOP##xinput --set-prop "SYNA801A:00 06CB:CEC6 Touchpad" "libinput Scrolling Pixel Distance" 50
+

@@ -66,6 +66,7 @@ do
 done < users
 
 git clone https://github.com/grassmunk/Chicago95.git
+git clone https://github.com/tfolkersen/misc.git
 
 mkdir -p /usr/share/themes/
 mkdir -p /usr/share/icons
@@ -110,6 +111,11 @@ do
 	
 	cp -r scripts $home/scripts
 
+    ## Install misc programs
+    mkdir $home/scripts/programs
+    cp -r misc/dvorak $home/scripts/programs
+    cp -r misc/sched $home/scripts/programs
+
     cp gtkrc-2.0 $home/.gtkrc-2.0
 	#find $home/.config -type f -exec sed -i "s/USERNAMEGOESHERE/"$user"/g" {} +
 	find $home -type f -exec sed -i "s/USERNAMEGOESHERE/"$user"/g" {} +
@@ -140,3 +146,8 @@ rm -rf Chicago95
 chgrp -R shared /home/Shared
 chmod -R 2775 /home/Shared
 
+
+##### LAPTOP
+pacman -S bluez bluez-utils
+systemctl enable bluetooth
+systemctl start bluetooth

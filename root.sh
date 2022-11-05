@@ -4,6 +4,8 @@ hostname="hostname"
 
 timedatectl set-ntp true
 
+let LAPTOP=0
+
 pacman -S --noconfirm rsync reflector
 reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 pacman -Syyu --noconfirm
@@ -19,6 +21,10 @@ locale-gen
 
 timedatectl set-local-rtc true
 timedatectl set-ntp true
+
+if [ $LAPTOP == 1 ]; then
+    sed -i "s/##//g" config/i3blocks/config
+fi
 
 pacman -S --noconfirm archlinux-keyring
 

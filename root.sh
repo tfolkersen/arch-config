@@ -160,7 +160,7 @@ chmod -R 2775 /home/Shared
 
 ##### LAPTOP
 if [ $LAPTOP == 1 ]; then
-    pacman -S --no-confirm bluez bluez-utils light powertop
+    pacman -S --no-confirm bluez bluez-utils light powertop acpi
     #pacman -S --no-confirm xf86-input-synaptics
     systemctl enable bluetooth
     systemctl start bluetooth

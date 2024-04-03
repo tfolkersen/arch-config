@@ -24,6 +24,8 @@ local p = {
     ["gray"] = "#aaaaaa",
     ["dgray"] = "#7f7f7f",
 
+    ["statusColor"] = "#7010ff",
+
     ["cursorline"] = "#302080",
     ["signcolumn"] = "#808080",
 }
@@ -71,10 +73,10 @@ local theme = {
 
     ["Tabline"] = {p.white, p.dgray},
     ["TablineFill"] = {"None", p.black},
-    ["TablineSel"] = {p.white, p.magenta},
+    ["TablineSel"] = {p.white, p.statusColor},
     ["Title"] = {p.yellow},
 
-    ["StatusLine"] = {p.white, p.magenta},
+    ["StatusLine"] = {p.white, p.statusColor},
     ["StatusLineNC"] = {p.white, p.dgray},
 
     ["LineNr"] = {p.deeppink},
@@ -150,6 +152,8 @@ local theme = {
 
     ["DiagnosticError"] = {p.red},
     ["DiagnosticSignError"] = {p.red, p.black},
+
+    --["@keyword.import.c"] = {p.blue},
 
 
 

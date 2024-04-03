@@ -36,7 +36,7 @@ pacman -S --noconfirm alsa-utils mesa\
  i3-gaps i3status dmenu thunar dunst feh terminator kitty picom ranger okular scrot i3blocks lxappearance\
  pinta ueberzug tumbler ffmpegthumbnailer\
  noto-fonts noto-fonts-cjk terminus-font ttf-liberation ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
- firefox vlc xfce4 xfce4-goodies xsel sxhkd pavucontrol pulseaudio dkms linux-headers clementine gst-plugins-bad
+ firefox vlc xfce4 xfce4-goodies xsel sxhkd pavucontrol pulseaudio dkms linux-headers gst-plugins-bad ripgrep
 
 pacman -S --noconfirm texlive-most texlive-lang biber
 
@@ -160,11 +160,17 @@ chmod -R 2775 /home/Shared
 
 ##### LAPTOP
 if [ $LAPTOP == 1 ]; then
-    pacman -S --no-confirm bluez bluez-utils light powertop acpi
+    pacman -S --no-confirm bluez bluez-utils powertop acpi acpilight
     #pacman -S --no-confirm xf86-input-synaptics
     systemctl enable bluetooth
     systemctl start bluetooth
-    git clone https://aur.archlinux.org/mons.git
-    git clone https://aur.archlinux.org/auto-cpufreq.git
 fi
+
+#Downgrade ncurses
+pacman --noconfirm -U https://archive.archlinux.org/packages/n/ncurses/ncurses-6.4-1-x86_64.pkg.tar.zst
+
+
+
+cp extras.sh /home/Shared
+
 

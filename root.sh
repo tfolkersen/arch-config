@@ -1,10 +1,20 @@
 #!/bin/bash
 
+#       Instructions
+#
+# Edit variables at top of: root.sh, users, afterInstall/extras.sh
+# Run as root after installing base system
+#
+#
+# users file must have root at the top
+
+
+
 hostname="hostname"
+let LAPTOP=0
+let TYPESETTING=0
 
 timedatectl set-ntp true
-
-let LAPTOP=0
 
 pacman -S --noconfirm rsync reflector
 reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
@@ -74,7 +84,9 @@ systemctl start numlockTTY
 
 cp evdev /usr/share/X11/xkb/keycodes/evdev
 mkdir -p /etc/X11/xorg.conf.d
-cp cursor-20.conf /etc/X11/xorg.conf.d
+        # ||                                 ||
+        # vv Maybe use for nvidia driver?    vv
+#cp cursor-20.conf /etc/X11/xorg.conf.d
 
 
 mkdir -p /usr/share/i3blocksScripts

@@ -8,6 +8,8 @@ let LAPTOP=0
 
 pacman -S --noconfirm rsync reflector
 reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
+pacman -S --noconfirm archlinux-keyring
+
 pacman -Syyu --noconfirm
 pacman -S --noconfirm vim man git gcc python3 make cmake sed unzip neofetch openssh
 
@@ -31,7 +33,6 @@ else
     sed -i "s/!!DESKTOP!!//g" Xresources
 fi
 
-pacman -S --noconfirm archlinux-keyring
 
 pacman -S --noconfirm alsa-utils mesa\
  xorg-server xorg-xinit xorg-xinput numlockx\

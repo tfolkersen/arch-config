@@ -1,5 +1,13 @@
-[] Install nvim plugins for root user
+[] set charge limit in /sys/class/power_supply/BAT0/charge_control_end_threshold (~80)
+
+[] run claim_i3blocks.sh
+
+[] Install nvim plugins for root user, and self
 
 [] install extras.sh as normal user
 
-[] run claim_i3blocks.sh
+[] clone wallpapers
+
+[] set volumes with alsamixer
+
+

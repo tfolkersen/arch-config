@@ -58,6 +58,7 @@ cp alsa-base.conf /etc/modprobe.d/alsa-base.conf
 
 mkdir -p /usr/share/i3blocksScripts
 cp -r i3blocksScripts /usr/share
+make -C /usr/share/i3blocksScripts
 chmod +x /usr/share/i3blocksScripts/*.sh
 
 echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf

@@ -30,9 +30,11 @@ if [ $LAPTOP == 1 ]; then
     sed -i "s/!!LAPTOP!!//g" Xresources
     sed -i "s/##LAPTOP##//g" config/i3blocks/config
     sed -i "s/^xinput --set-prop \"Glorious Model D\" \"Coordinate Transformation Matrix\" .*$/xinput --set-prop \"Glorious Model D\" \"Coordinate Transformation Matrix\" 0.75 0 0 0 0.75 0 0 0 1/g" xinputStuff
+    cp alsa-base-laptop.conf /etc/modprobe.d/alsa-base.conf
 else
     sed -i "s/##DESKTOP##//g" xinputStuff
     sed -i "s/!!DESKTOP!!//g" Xresources
+    cp alsa-base-desktop.conf /etc/modprobe.d/alsa-base.conf
 fi
 
 
@@ -58,7 +60,6 @@ cp evdev /usr/share/X11/xkb/keycodes/evdev
 mkdir -p /etc/X11/xorg.conf.d
 cp cursor-20.conf /etc/X11/xorg.conf.d
 
-cp alsa-base.conf /etc/modprobe.d/alsa-base.conf
 
 mkdir -p /usr/share/i3blocksScripts
 cp -r i3blocksScripts /usr/share

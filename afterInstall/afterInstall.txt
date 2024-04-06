@@ -11,3 +11,5 @@
 [] set volumes with alsamixer
 
 [] consider disabling kitty.conf dynamic_background_opacity
+
+[] configure git

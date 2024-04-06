@@ -29,9 +29,19 @@ if [ $LAPTOP == 1 ]; then
     sed -i "s/##LAPTOP##//g" xinputStuff
     sed -i "s/!!LAPTOP!!//g" Xresources
     sed -i "s/##LAPTOP##//g" config/i3blocks/config
+
+    # laptop mouse sensitivity
     sed -i "s/^xinput --set-prop \"Glorious Model D\" \"Coordinate Transformation Matrix\" .*$/xinput --set-prop \"Glorious Model D\" \"Coordinate Transformation Matrix\" 0.75 0 0 0 0.75 0 0 0 1/g" xinputStuff
+
     cp alsa-base-laptop.conf /etc/modprobe.d/alsa-base.conf
+
+    # i3 run laptop xmodmap
+    sed -i "s/^exec xmodmap \~\/scripts\/configs\/xmKeyboard/exec xmodmap \~\/scripts\/configs\/xmLaptop/g" config/i3/config
 else
+
+    # i3 font size for laptop
+    sed -i "s/^ *font *pango:jetbrains *mono *medium *[0-9]\+\(\.[0-9]*\)\? *$/font pango:jetbrains mono medium 10/g" config/i3/config
+
     sed -i "s/##DESKTOP##//g" xinputStuff
     sed -i "s/!!DESKTOP!!//g" Xresources
     cp alsa-base-desktop.conf /etc/modprobe.d/alsa-base.conf
@@ -44,7 +54,7 @@ pacman -S --noconfirm alsa-utils mesa\
  pinta ueberzug tumbler ffmpegthumbnailer\
  noto-fonts noto-fonts-cjk terminus-font ttf-liberation ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
  firefox vlc xfce4 xfce4-goodies xsel sxhkd pavucontrol pulseaudio dkms linux-headers gst-plugins-bad ripgrep\
- ethtool dhcpcd
+ ethtool dhcpcd xorg-xmodmap
 
 pacman -S --noconfirm texlive-most texlive-lang biber
 

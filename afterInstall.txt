@@ -1,0 +1,5 @@
+[] Install nvim plugins for root user
+
+[] install extras.sh as normal user
+
+[] run claim_i3blocks.sh

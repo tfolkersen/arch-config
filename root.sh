@@ -176,6 +176,6 @@ sed -i "s/^IgnorePkg *=.*$/$line ncurses/g" /etc/pacman.conf
 # change nvim theme for root user (blue status/tab)
 sed -i "s/^ *\[\"statusColor\"\] *=.*$/    \[\"statusColor\"\] = \"#0040ff\",/g" /root/.config/nvim/colors/elise.lua
 
-cp extras.sh /home/Shared
+cp -r afterInstall /home/Shared
 
 

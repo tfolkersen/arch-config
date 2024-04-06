@@ -10,10 +10,12 @@ PS1='[\u@\h \W]\$ '
 
 ############################################################
 TERM=kitty
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
+
+alias vim="/usr/bin/nvim $@"
 
 alias kt="vim ~/.config/kitty/kitty.conf"
-alias tt="vim /home/user1/.config/terminator/config"
+alias tt="vim ~/.config/terminator/config"
 
 alias prof="vim ~/.bashrc"
 alias ic="vim ~/.config/i3/config"
@@ -64,12 +66,11 @@ alias src="source ~/.bashrc"
 alias vimr="vim ~/.vimrc"
 alias rrco="vim ~/.config/ranger/commands.py"
 alias rrc="vim ~/.config/ranger/rc.conf"
-alias todo="vim ~/Desktop/todo.txt +\"color default\""
-alias plan="vim ~/plan.txt +\"color default\""
-alias li="vim ~/Desktop/links.txt +\"color default\""
+alias todo="vim ~/Desktop/todo.txt"
+alias plan="vim ~/plan.txt"
+alias li="vim ~/Desktop/links.txt"
 alias vimc="cd ~/.vim/colors"
 alias ka="killall $@"
-alias vol="sh /usr/share/i3blocksScripts/volumeDisplay.sh"
 
 cleanhistory() {
 	rm ~/.viminfo
@@ -78,7 +79,21 @@ cleanhistory() {
     rm ~/.lesshst
     rm ~/.rangerExit
     rm ~/.python_history
+    rm ~/.local/share/recently-used.xbel
 	history -cw
+}
+
+cleanhistory2() {
+    cleanhistory
+    rm ~/.local/share/nvim/telescope_history
+    rm ~/.local/share/nvim/harpoon.json
+    rm -rf ~/.local/share/ranger
+    rm ~/.local/share/nvim/.netrwhist
+    rm -rf ~/.local/state/nvim/shada
+    rm -rf ~/.local/state/nvim/swap
+    rm -rf ~/.local/state/nvim/undo
+    rm ~/.local/state/nvim/log
+    rm ~/.local/state/nvim/luasnip.log
 }
 
 sc() {
@@ -89,8 +104,9 @@ alias gstat="git status"
 alias gb="git branch"
 alias gcom="git commit"
 
-export PATH=/home/USERNAMEGOESHERE/VSCode-linux-x64/bin:$PATH
-export PATH=/home/USERNAMEGOESHERE/Games/execScripts:$PATH
+export PATH=~/VSCode-linux-x64/bin:$PATH
+export PATH=~/Games/execScripts:$PATH
+export PATH=~/scripts:$PATH
 
 vom () {
     com=$(python3 ~/scripts/vimOpen.py $@)
@@ -102,11 +118,31 @@ rwall () {
 }
 
 alias ohaton="ssh ohaton"
-alias proc="ps -U USERNAMEGOESHERE"
+alias proc="ps -U $(whoami)"
 
 alias xin="sh ~/.xinputStuff"
 alias sls="screen -ls $@"
 alias sr="screen -r $@"
+
+## NEW LAPTOP STUFF
+alias nvc="cd ~/.config/nvim"
+alias scr="cd ~/scripts && clear && ls"
+alias out-hdmi="sh ~/scripts/hdmi.sh"
+alias out-laptop="sh ~/scripts/laptop.sh"
+
+lt () {
+    local x="*"
+
+    if [ -v 1 ]; then
+        x="$1"
+    fi
+
+    ranger --list-tagged-files "$x"
+}
+
+alias rt="vim ~/.local/share/ranger/tagged"
+alias clt="rm ~/.local/share/ranger/tagged; touch ~/.local/share/ranger/tagged"
+
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi

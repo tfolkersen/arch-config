@@ -11,9 +11,12 @@
 
 (
     [
+        "#include"
         (preproc_function_def)
         (preproc_def)
         (preproc_call)
+        "#endif"
+        "#else"
     ] @preproc_simple (#set! "priority" 202)
 )
 
@@ -28,6 +31,8 @@
 (
     [
         "struct"
+        "const"
+        "enum"
         ;"namespace" ;cpp
     ] @keyword_override (#set! "priority" 201)
 )

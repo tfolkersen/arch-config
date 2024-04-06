@@ -1,4 +1,4 @@
-;extends
+; extends
 
 (
     [
@@ -10,6 +10,9 @@
 (
     [
         "namespace" ;cpp
+        "template"
+        "class"
+        "typename"
     ] @keyword_override (#set! "priority" 201)
 )
 

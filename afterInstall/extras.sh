@@ -12,5 +12,7 @@ if [ $LAPTOP == 1 ]; then
 
     git clone https://aur.archlinux.org/mons.git
     makepkg -D mons -si --noconfirm
+
+    sudo systemctl enable --now auto-cpufreq 
 fi
 

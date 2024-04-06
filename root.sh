@@ -29,6 +29,7 @@ if [ $LAPTOP == 1 ]; then
     sed -i "s/##LAPTOP##//g" xinputStuff
     sed -i "s/!!LAPTOP!!//g" Xresources
     sed -i "s/##LAPTOP##//g" config/i3blocks/config
+    sed -i "s/^xinput --set-prop \"Glorious Model D\" \"Coordinate Transformation Matrix\" .*$/xinput --set-prop \"Glorious Model D\" \"Coordinate Transformation Matrix\" 0.75 0 0 0 0.75 0 0 0 1/g" xinputStuff
 else
     sed -i "s/##DESKTOP##//g" xinputStuff
     sed -i "s/!!DESKTOP!!//g" Xresources
@@ -40,7 +41,8 @@ pacman -S --noconfirm alsa-utils mesa\
  i3-gaps i3status dmenu thunar dunst feh terminator kitty picom ranger okular scrot i3blocks lxappearance\
  pinta ueberzug tumbler ffmpegthumbnailer\
  noto-fonts noto-fonts-cjk terminus-font ttf-liberation ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
- firefox vlc xfce4 xfce4-goodies xsel sxhkd pavucontrol pulseaudio dkms linux-headers gst-plugins-bad ripgrep
+ firefox vlc xfce4 xfce4-goodies xsel sxhkd pavucontrol pulseaudio dkms linux-headers gst-plugins-bad ripgrep\
+ ethtool dhcpcd
 
 pacman -S --noconfirm texlive-most texlive-lang biber
 

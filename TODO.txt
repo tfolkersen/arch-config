@@ -1,1 +1,5 @@
 -- Use maim instead of scrot
+
+-- Thunar font size: 
+.thunar { font-size: 18pt }
+in config gtk3rc

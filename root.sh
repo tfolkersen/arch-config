@@ -28,6 +28,7 @@ if [ $LAPTOP == 1 ]; then
     sed -i "s/##//g" config/i3blocks/config
     sed -i "s/##LAPTOP##//g" xinputStuff
     sed -i "s/!!LAPTOP!!//g" Xresources
+    sed -i "s/##LAPTOP##//g" config/i3blocks/config
 else
     sed -i "s/##DESKTOP##//g" xinputStuff
     sed -i "s/!!DESKTOP!!//g" Xresources

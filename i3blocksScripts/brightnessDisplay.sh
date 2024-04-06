@@ -1,5 +1,5 @@
 func() {
-    let b=$(cat /sys/class/backlight/amdgpu_bl0/brightness)
+    let b=$(cat /sys/class/backlight/amdgpu_bl1/brightness)
     echo $b
 }
 

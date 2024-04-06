@@ -1,18 +1,17 @@
 [USER]
 command='whoami'
-interval=60
+interval=-1
 color=#6040ff
 
-##[BRIGHTNESS]
-##command=sh /usr/share/i3blocksScripts/brightnessDisplay.sh
-##interval=1
-##color=#ff00ff
-##signal=3
-##color=#ffff00
+##LAPTOP##[BRIGHTNESS]
+##LAPTOP##command=sh /usr/share/i3blocksScripts/brightnessDisplay.sh
+##LAPTOP##interval=20
+##LAPTOP##signal=3
+##LAPTOP##color=#ffff00
 
 [DISK]
 command=df -h | awk '/home/{ printf("Disk: %4s/%s\n", $4, $2) }'
-interval=2
+interval=10
 
 [MEM]
 command=free -h | awk '/Mem:/ { printf("RAM: %5s/%s\n", $3, $2) }'
@@ -20,11 +19,17 @@ interval=1
 
 [MONTH]
 command=date +"%F"
-interval=1
+interval=10
+
+[OPAC]
+command=sh /usr/share/i3blocksScripts/opacityDisplay.sh
+interval=20
+signal=4
+color=#ff80ff
 
 [VOLUME]
 command=sh /usr/share/i3blocksScripts/volumeDisplay.sh
-interval=1
+interval=20
 signal=2
 color=#9070ff
 
@@ -33,9 +38,7 @@ command=date +"%r"
 interval=1
 color=#00ffff
 
-##[BATTERY]
-##command=sh /usr/share/i3blocksScripts/batteryDisplay.sh
-##interval=1
-##color=#ff00ff
-
-
+##LAPTOP##[BATTERY]
+##LAPTOP##command=/usr/share/i3blocksScripts/batteryDisplay
+##LAPTOP##interval=4
+##LAPTOP##color=#ff00ff

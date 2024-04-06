@@ -42,6 +42,9 @@ else
     # i3 font size for laptop
     sed -i "s/^ *font *pango:jetbrains *mono *medium *[0-9]\+\(\.[0-9]*\)\? *$/font pango:jetbrains mono medium 10/g" config/i3/config
 
+    # dunst font size for laptop
+    sed -i "s/^ *font *= *JetBrains *Mono *[0-9]\+\(\.[0-9]\*\)\? *$/    font = JetBrains  Mono 12/g" config/dunst/dunstrc
+
     sed -i "s/##DESKTOP##//g" xinputStuff
     sed -i "s/!!DESKTOP!!//g" Xresources
     cp alsa-base-desktop.conf /etc/modprobe.d/alsa-base.conf

@@ -45,6 +45,9 @@ else
     # dunst font size for laptop
     sed -i "s/^ *font *= *JetBrains *Mono *[0-9]\+\(\.[0-9]\*\)\? *$/    font = JetBrains  Mono 12/g" config/dunst/dunstrc
 
+    # kitty font size for laptop
+    sed -i "s/^ *font_size \+[0-9]\+\(\.[0-9]*\)\? *$/font_size 10.5/g" config/kitty/kitty.conf
+
     sed -i "s/##DESKTOP##//g" xinputStuff
     sed -i "s/!!DESKTOP!!//g" Xresources
     cp alsa-base-desktop.conf /etc/modprobe.d/alsa-base.conf

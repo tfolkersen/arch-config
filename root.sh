@@ -57,8 +57,8 @@ cp cursor-20.conf /etc/X11/xorg.conf.d
 cp alsa-base.conf /etc/modprobe.d/alsa-base.conf
 
 mkdir -p /usr/share/i3blocksScripts
-cp i3blocksScripts/* /usr/share/i3blocksScripts
-chmod +x /usr/share/i3blocksScripts/*
+cp -r i3blocksScripts /usr/share
+chmod +x /usr/share/i3blocksScripts/*.sh
 
 echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 
@@ -168,9 +168,10 @@ if [ $LAPTOP == 1 ]; then
     systemctl start bluetooth
 fi
 
-#Downgrade ncurses
+#Downgrade ncurses, add to IgnorePkg
 pacman --noconfirm -U https://archive.archlinux.org/packages/n/ncurses/ncurses-6.4-1-x86_64.pkg.tar.zst
-
+line=$(grep "^IgnorePkg *=" /etc/pacman.conf)
+sed -i "s/^IgnorePkg *=.*$/$line ncurses/g" /etc/pacman.conf
 
 
 cp extras.sh /home/Shared

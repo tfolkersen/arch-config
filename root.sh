@@ -47,8 +47,8 @@ if [ $LAPTOP == 1 ]; then
 
     # i3 run laptop xmodmap
     sed -i "s/^exec xmodmap \~\/scripts\/configs\/xmKeyboard/exec xmodmap \~\/scripts\/configs\/xmLaptop/g" config/i3/config
-else
 
+    
     # i3 font size for laptop
     sed -i "s/^ *font *pango:jetbrains *mono *medium *[0-9]\+\(\.[0-9]*\)\? *$/font pango:jetbrains mono medium 10/g" config/i3/config
 
@@ -57,7 +57,7 @@ else
 
     # kitty font size for laptop
     sed -i "s/^ *font_size \+[0-9]\+\(\.[0-9]*\)\? *$/font_size 10.5/g" config/kitty/kitty.conf
-
+else
     sed -i "s/##DESKTOP##//g" xinputStuff
     sed -i "s/!!DESKTOP!!//g" Xresources
     cp alsa-base-desktop.conf /etc/modprobe.d/alsa-base.conf
@@ -72,7 +72,9 @@ pacman -S --noconfirm alsa-utils mesa\
  firefox vlc xfce4 xfce4-goodies xsel sxhkd pavucontrol pulseaudio dkms linux-headers gst-plugins-bad ripgrep\
  ethtool dhcpcd xorg-xmodmap
 
-pacman -S --noconfirm texlive-most texlive-lang biber
+if [ $TYPESETTING == 1 ]; then
+    pacman -S --noconfirm texlive-most texlive-lang biber
+fi
 
 #pacman -S --noconfirm xorg-bdftopcf xorg-mkfontscale
 

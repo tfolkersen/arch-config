@@ -3,3 +3,5 @@
 -- Thunar font size: 
 .thunar { font-size: 18pt }
 in config gtk3rc
+
+-- add aseprite to extras.sh

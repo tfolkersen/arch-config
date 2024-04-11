@@ -11,3 +11,5 @@ in config gtk3rc
 -- add thunar kill
 
 -- fix xinput macro
+
+-- make tmux work with old ncurses, OR, update ncurses and make ranger work

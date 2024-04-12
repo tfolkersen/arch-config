@@ -10,8 +10,8 @@ in config gtk3rc
 
 -- add thunar kill
 
--- fix xinput macro
-
 -- make tmux work with old ncurses, OR, update ncurses and make ranger work
 
 -- add to kitty: jump to tab number
+
+-- automate key generation for github

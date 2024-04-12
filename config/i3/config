@@ -76,8 +76,8 @@ bindsym $sup+$mod+mod2+KP_1 exec notify-send -t 2000 "Monitor sens" && sh ~/scri
 bindsym $sup+$mod+KP_End exec notify-send -t 2000 "Monitor sens" && sh ~/scripts/configs/msens-desktop.sh
 
 # xinput
-bindsym $sup+$mod+mod2+KP_Add exec notify-send -t 2000 "ran ~/.xinputStuff" && sh ~/.xinputStuff.sh
-bindsym $sup+$mod+KP_Add exec notify-send -t 2000 "ran ~/.xinputStuff" && sh ~/.xinputStuff.sh
+bindsym $sup+$mod+mod2+KP_Add exec notify-send -t 2000 "ran ~/.xinputStuff" && sh ~/.xinputStuff
+bindsym $sup+$mod+KP_Add exec notify-send -t 2000 "ran ~/.xinputStuff" && sh ~/.xinputStuff
 
 # kitty opacity
 bindsym $sup+$mod+bracketleft exec sh ~/.config/i3/kitty-opacity-dec.sh

@@ -6,8 +6,6 @@ in config gtk3rc
 
 -- add aseprite to extras.sh
 
--- add kitty move window keys
-
 -- add thunar kill
 
 -- make tmux work with old ncurses, OR, update ncurses and make ranger work

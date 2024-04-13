@@ -285,8 +285,8 @@ bindsym $alt+Shift+bracketright gaps outer all minus 5
 
 gaps inner 15
 
-bindsym $sup+backslash --release exec --no-startup-id /usr/bin/scrot -s&
-bindsym $sup+Shift+backslash --release exec scrot
+bindsym $sup+backslash --release exec --no-startup-id maim -s ~/$(date +%Y-%m-%d-%s-%N_maim.png)&
+bindsym $sup+Shift+backslash --release exec maim ~/$(date +%Y-%m-%d-%s-%N_maim.png)
 
 new_window pixel 1
 

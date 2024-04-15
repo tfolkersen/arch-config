@@ -11,3 +11,5 @@ in config gtk3rc
 -- add to kitty: jump to tab number
 
 -- automate key generation for github
+
+-- set default programs for images

@@ -4,7 +4,9 @@ in config gtk3rc
 
 -- add aseprite to extras.sh
 
--- add thunar kill
+-- add thunar kill keybind
+
+-- add shortcuts to thunar sidebar
 
 -- make tmux work with old ncurses, OR, update ncurses and make ranger work
 
@@ -13,3 +15,4 @@ in config gtk3rc
 -- automate key generation for github
 
 -- set default programs for images
+

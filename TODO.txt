@@ -19,3 +19,5 @@ in config gtk3rc
 -- add kitty rename tab key
 
 -- add Harpoon-like tool to terminal, maybe add keybinds, add ranger compatibility
+
+-- add kitty tab hotkeys (like i3 workspaces)

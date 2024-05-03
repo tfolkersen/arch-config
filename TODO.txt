@@ -18,4 +18,4 @@ in config gtk3rc
 
 -- add kitty rename tab key
 
--- add Harpoon-like tool to terminal, maybe add keybinds
+-- add Harpoon-like tool to terminal, maybe add keybinds, add ranger compatibility

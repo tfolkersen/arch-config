@@ -16,3 +16,6 @@ in config gtk3rc
 
 -- set default programs for images
 
+-- add kitty rename tab key
+
+-- add Harpoon-like tool to terminal, maybe add keybinds

@@ -20,4 +20,4 @@ in config gtk3rc
 
 -- add Harpoon-like tool to terminal, maybe add keybinds, add ranger compatibility
 
--- add kitty tab hotkeys (like i3 workspaces)
+-- i3 keybinds should display a notification (i.e. kitty reload config)

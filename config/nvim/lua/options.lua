@@ -22,3 +22,12 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 
 vim.o.timeoutlen = 30000
+
+-- Disable annoying auto comment on newline
+vim.api.nvim_create_autocmd({"FileType"}, {
+    pattern = {"*"},
+    callback = function()
+        vim.cmd("set formatoptions-=ro")
+    end,
+})
+

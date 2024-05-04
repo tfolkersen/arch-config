@@ -21,3 +21,5 @@ in config gtk3rc
 -- add Harpoon-like tool to terminal, maybe add keybinds, add ranger compatibility
 
 -- i3 keybinds should display a notification (i.e. kitty reload config)
+
+-- change nvim extending comments on newline

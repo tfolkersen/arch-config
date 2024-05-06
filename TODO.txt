@@ -21,3 +21,9 @@ in config gtk3rc
 -- add Harpoon-like tool to terminal, maybe add keybinds, add ranger compatibility
 
 -- i3 keybinds should display a notification (i.e. kitty reload config)
+
+-- stop nvim ~ files
+
+-- nvim cpp preprocessor CONSTANTS are white instead of blue
+
+-- nvim search typo should stop at last match instead of scrolling to stop of file

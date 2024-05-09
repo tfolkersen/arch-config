@@ -27,3 +27,5 @@ in config gtk3rc
 -- nvim cpp preprocessor CONSTANTS are white instead of blue
 
 -- nvim search typo should stop at last match instead of scrolling to stop of file
+
+-- add dunst icons?

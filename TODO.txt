@@ -28,4 +28,6 @@ in config gtk3rc
 
 -- nvim search typo should stop at last match instead of scrolling to stop of file
 
+-- nvim ctrl + backspace delete word
+
 -- add dunst icons?

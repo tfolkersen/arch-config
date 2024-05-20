@@ -32,6 +32,11 @@ local p = {
 
 
 local theme = {
+    ["Normal"] = {p.gray, p.black},
+    ["@variable"] = {p.gray, p.black},
+    ["@function"] = {p.gray, p.black},
+    ["Special"] = {p.gray, p.black},
+
     ["Visual"] = {p.gray, p.black, {reverse = true}},
     ["CursorLine"] = {p.cursorline, p.white, {reverse = true}},
     ["FloatBorder"] = {p.systempurple, "None"},
@@ -73,10 +78,10 @@ local theme = {
 
     ["Tabline"] = {p.white, p.dgray},
     ["TablineFill"] = {"None", p.black},
-    ["TablineSel"] = {p.white, p.statusColor},
+    ["TablineSel"] = {p.white, p.magenta},
     ["Title"] = {p.yellow},
 
-    ["StatusLine"] = {p.white, p.statusColor},
+    ["StatusLine"] = {p.white, p.magenta},
     ["StatusLineNC"] = {p.white, p.dgray},
 
     ["LineNr"] = {p.deeppink},

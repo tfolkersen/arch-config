@@ -33,3 +33,7 @@ in config gtk3rc
 -- add dunst icons?
 
 -- add fzf exclude directories
+
+-- rewrite i3blocks modules to be cooler (visualize RAM? what happened to disk?)
+
+-- fix zzr ranger selected file jank

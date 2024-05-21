@@ -211,10 +211,13 @@ zzt() {
     echo "$fzsel" | while read -r line ; do
         line=$(readlink -f "$line")
 
+        if [[ -z "$line" ]] ; then
+            continue
+        fi
+
         grep -Fqx "$line" ~/.local/share/ranger/tagged || echo "$line" >> ~/.local/share/ranger/tagged
 
     done
-
 }
 
 

@@ -47,3 +47,5 @@ in config gtk3rc
 -- add installation instructions with luks steps
 
 -- consider auto unmount for mntkey
+
+-- ranger: indicate whether hidden files are shown

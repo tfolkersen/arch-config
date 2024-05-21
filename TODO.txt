@@ -41,3 +41,9 @@ in config gtk3rc
 -- maybe add ft (filter tags); might be a bad idea
 
 -- fix ranger file type programs
+
+-- add to i3blocks: mntkey indicator
+
+-- add installation instructions with luks steps
+
+-- consider auto unmount for mntkey

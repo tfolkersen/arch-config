@@ -172,6 +172,24 @@ zzc() {
     fi
 }
 
+zzv() {
+    fzsel=$(fzf --preview="cat {}" +m --border-label="Vim File" $@)
+
+    if [[ -n "$fzsel" ]] ; then
+        fzsel=$(readlink -f "$fzsel")
+
+        if [[ -d "$fzsel" ]] ; then
+            cd "$fzsel"
+            vim
+        elif [[ -e "$fzsel" ]] ; then
+            parent=$(dirname "$fzsel")
+            cd "$parent"
+            vim "$fzsel"
+        fi
+    fi
+}
+
+
 zzr() {
     fzsel=$(fzf --preview="cat {}" +m --border-label="Ranger Directory" $@)
 

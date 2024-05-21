@@ -140,7 +140,7 @@ lt () {
     ranger --list-tagged-files "$x"
 }
 
-alias rt="vim ~/.local/share/ranger/tagged"
+alias et="vim ~/.local/share/ranger/tagged"
 alias clt="rm ~/.local/share/ranger/tagged; touch ~/.local/share/ranger/tagged"
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'

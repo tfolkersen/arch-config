@@ -31,3 +31,5 @@ in config gtk3rc
 -- nvim ctrl + backspace delete word
 
 -- add dunst icons?
+
+-- add fzf exclude directories

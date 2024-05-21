@@ -10,13 +10,13 @@ in config gtk3rc
 
 -- make tmux work with old ncurses, OR, update ncurses and make ranger work
 
--- add to kitty: jump to tab number
+-- add to kitty: jump to tab number (Ctrl Cmd num ?)
 
 -- automate key generation for github
 
 -- set default programs for images
 
--- add kitty rename tab key
+-- add kitty rename tab key (Cmd Shift T)
 
 -- add Harpoon-like tool to terminal, maybe add keybinds, add ranger compatibility
 
@@ -37,3 +37,7 @@ in config gtk3rc
 -- rewrite i3blocks modules to be cooler (visualize RAM? what happened to disk?)
 
 -- fix zzr ranger selected file jank
+
+-- maybe add ft (filter tags); might be a bad idea
+
+-- fix ranger file type programs

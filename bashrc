@@ -143,6 +143,63 @@ lt () {
 alias rt="vim ~/.local/share/ranger/tagged"
 alias clt="rm ~/.local/share/ranger/tagged; touch ~/.local/share/ranger/tagged"
 
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:#aaaaaa,fg+:#ffffff,bg:#000000,bg+:#ff00ff
+  --color=hl:#00ffff,hl+:#00ffff,info:#ff60ff,marker:#00ffff
+  --color=prompt:#6040ff,spinner:#ff60ff,pointer:#ffffff,header:#6040ff
+  --color=gutter:#000000,border:#6040ff,separator:#6040ff,scrollbar:#ff00ff
+  --color=preview-scrollbar:#ff00ff,label:#ff60ff,query:#aaaaaa
+  --border="rounded" --border-label="Results" --border-label-pos="0" --preview-window="border-rounded"
+  --margin="2" --prompt="> " --marker="*" --pointer=">"
+  --separator="─" --scrollbar="▋" --info="right"
+
+  --walker=file,dir,follow,hidden
+  '
+
+
+zzc() {
+    fzsel=$(fzf --preview="cat {}" +m --border-label="Change Directory" $@)
+
+    if [[ -n "$fzsel" ]] ; then
+        fzsel=$(readlink -f "$fzsel")
+
+        if [[ -d "$fzsel" ]] ; then
+            cd "$fzsel"
+        elif [[ -e "$fzsel" ]] ; then
+            fzsel=$(dirname "$fzsel")
+            cd "$fzsel"
+        fi
+    fi
+}
+
+zzr() {
+    fzsel=$(fzf --preview="cat {}" +m --border-label="Ranger Directory" $@)
+
+    if [[ -n "$fzsel" ]] ; then
+        fzsel=$(readlink -f "$fzsel")
+
+        if [[ -d "$fzsel" ]] ; then
+            ra "$fzsel"
+        elif [[ -e "$fzsel" ]] ; then
+            parent=$(dirname "$fzsel")
+            ra "$parent" --selectfile="$fzsel"
+        fi
+    fi
+}
+
+zzt() {
+    fzsel=$(fzf --preview="cat {}" -m --border-label="Tag Files" $@)
+
+    echo "$fzsel" | while read -r line ; do
+        line=$(readlink -f "$line")
+
+        grep -Fqx "$line" ~/.local/share/ranger/tagged || echo "$line" >> ~/.local/share/ranger/tagged
+
+    done
+
+}
+
+
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi

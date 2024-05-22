@@ -26,6 +26,17 @@ alias dow="cd ~/Downloads && clear && ls"
 alias doc="cd ~/Documents && clear && ls"
 alias shr="cd ~/shared && clear && ls"
 
+preview() {
+    if [[ -d "$1" ]] ; then
+        file "$1"
+    else
+        head -c 4096 "$1"
+    fi
+}
+
+export -f preview
+
+
 ba() {
     cd "$OLDPWD"
 }
@@ -39,10 +50,11 @@ alias clr="clear"
 alias cls="clear && ls"
 
 ra() {
-    ranger --choosedir=$HOME/.rangerExit $@
+    ranger --choosedir=$HOME/.rangerExit "$@"
     RANGEREXIT="$(cat ~/.rangerExit)"
     cd "$RANGEREXIT"
 }
+
 
 cl() {
 	cd "$@"
@@ -156,9 +168,8 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --walker=file,dir,follow,hidden
   '
 
-
 zzc() {
-    fzsel=$(fzf --preview="cat {}" +m --border-label="Change Directory" $@)
+    fzsel=$(fzf --preview="preview {}" +m --border-label="Change Directory" "$@")
 
     if [[ -n "$fzsel" ]] ; then
         fzsel=$(readlink -f "$fzsel")
@@ -173,7 +184,7 @@ zzc() {
 }
 
 zzv() {
-    fzsel=$(fzf --preview="cat {}" +m --border-label="Vim File" $@)
+    fzsel=$(fzf --preview="preview {}" +m --border-label="Vim File" "$@")
 
     if [[ -n "$fzsel" ]] ; then
         fzsel=$(readlink -f "$fzsel")
@@ -189,14 +200,16 @@ zzv() {
     fi
 }
 
+
 zzr() {
-    fzsel=$(fzf --preview="cat {}" +m --border-label="Ranger Directory" $@)
+    fzsel=$(fzf --preview="preview {}" +m --border-label="Ranger File/Directory" "$@")
 
     if [[ -n "$fzsel" ]] ; then
         fzsel=$(readlink -f "$fzsel")
 
         if [[ -d "$fzsel" ]] ; then
-            ra "$fzsel"
+            cd "$fzsel"
+            ra
         elif [[ -e "$fzsel" ]] ; then
             parent=$(dirname "$fzsel")
             cd "$parent"
@@ -207,7 +220,7 @@ zzr() {
 
 
 zzt() {
-    fzsel=$(fzf --preview="cat {}" -m --border-label="Tag Files" $@)
+    fzsel=$(fzf --preview="preview {}" -m --border-label="Tag Files" "$@")
 
     echo "$fzsel" | while read -r line ; do
         line=$(readlink -f "$line")

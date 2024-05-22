@@ -47,3 +47,5 @@ in config gtk3rc
 -- consider auto unmount for mntkey
 
 -- ranger: indicate whether hidden files are shown
+
+-- add status check for auto-cpufreq (possibly to i3bar)

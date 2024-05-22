@@ -49,3 +49,5 @@ in config gtk3rc
 -- ranger: indicate whether hidden files are shown
 
 -- add status check for auto-cpufreq (possibly to i3bar)
+
+-- auto-cpufreq pollutes journalctl

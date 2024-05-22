@@ -189,7 +189,6 @@ zzv() {
     fi
 }
 
-
 zzr() {
     fzsel=$(fzf --preview="cat {}" +m --border-label="Ranger Directory" $@)
 
@@ -200,10 +199,12 @@ zzr() {
             ra "$fzsel"
         elif [[ -e "$fzsel" ]] ; then
             parent=$(dirname "$fzsel")
-            ra "$parent" --selectfile="$fzsel"
+            cd "$parent"
+            ra --selectfile="$fzsel"
         fi
     fi
 }
+
 
 zzt() {
     fzsel=$(fzf --preview="cat {}" -m --border-label="Tag Files" $@)

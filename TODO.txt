@@ -36,8 +36,6 @@ in config gtk3rc
 
 -- rewrite i3blocks modules to be cooler (visualize RAM? what happened to disk?)
 
--- fix zzr ranger selected file jank
-
 -- maybe add ft (filter tags); might be a bad idea
 
 -- fix ranger file type programs

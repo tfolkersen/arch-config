@@ -28,9 +28,26 @@ alias shr="cd ~/shared && clear && ls"
 
 preview() {
     if [[ -d "$1" ]] ; then
-        file "$1"
+        echo "      ((( Directory )))"
+        ls -A "$1"
     else
-        head -c 4096 "$1"
+        head -c 4096 "$1" 2>&1 | tr -d "\0" | read -r prev
+
+        pstat=("${PIPESTATUS[@]}")
+
+        ok=0
+        for x in "${pstat[@]}" ; do
+           if [[ "$x" -ne 0 ]] ; then
+               ok=1
+               break
+           fi
+        done
+
+        if [[ "$ok" -eq 0 ]] ; then
+            echo "$prev"
+        else
+            echo "      ????? No preview ????? "
+        fi
     fi
 }
 

@@ -62,4 +62,4 @@ in config gtk3rc
 
 -- VLC alternative?
 
-
+-- add SSH to i3bar

@@ -51,3 +51,15 @@ in config gtk3rc
 -- add status check for auto-cpufreq (possibly to i3bar)
 
 -- auto-cpufreq pollutes journalctl
+
+-- add wiiconnect script and BT i3bar modules (BT off, BT on, devices connected)
+
+-- add retroarch configs
+
+-- output screen keybinds
+
+-- move key remaps away from xmodmap
+
+-- VLC alternative?
+
+

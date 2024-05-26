@@ -1,0 +1,2 @@
+(echo "power on" && sleep 1 && pkill -RTMIN+5 i3blocks > /dev/null && echo "scan on" && sleep 2 && echo "connect 58:BD:A3:42:33:46" && sleep 1 && pkill -RTMIN+5 i3blocks > /dev/null && sleep 2) | bluetoothctl
+pkill -RTMIN+5 i3blocks > /dev/null

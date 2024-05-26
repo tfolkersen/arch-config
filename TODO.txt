@@ -52,8 +52,6 @@ in config gtk3rc
 
 -- auto-cpufreq pollutes journalctl
 
--- add wiiconnect script and BT i3bar modules (BT off, BT on, devices connected)
-
 -- add retroarch configs
 
 -- output screen keybinds

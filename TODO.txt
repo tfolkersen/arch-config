@@ -63,3 +63,7 @@ in config gtk3rc
 -- VLC alternative?
 
 -- add SSH to i3bar
+
+-- add ranger functionality to nvim
+
+-- add fzf functionality to ranger

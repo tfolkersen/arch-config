@@ -67,3 +67,5 @@ in config gtk3rc
 -- add fzf functionality to ranger
 
 -- add battery notifications
+
+-- make "pipecheck" C program for bash scripting, or find the proper way to do head | tr | read

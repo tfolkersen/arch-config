@@ -1,3 +1,8 @@
+[MNTKEY]
+command=/usr/share/i3blocksScripts/mntkey.sh
+interval=25
+color=#ff0000
+
 [USER]
 command='whoami'
 interval=-1

@@ -65,3 +65,5 @@ in config gtk3rc
 -- add ranger functionality to nvim
 
 -- add fzf functionality to ranger
+
+-- add battery notifications

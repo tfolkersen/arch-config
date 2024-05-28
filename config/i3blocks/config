@@ -21,10 +21,28 @@ interval=1
 command=date +"%F"
 interval=10
 
+##LAPTOP##[SSHON]
+##LAPTOP##command=/usr/share/i3blocksScripts/sshon.sh
+##LAPTOP##interval=10
+##LAPTOP##color=#ff0000
+##LAPTOP##signal=6
+
+##LAPTOP##[SSHOFF]
+##LAPTOP##command=/usr/share/i3blocksScripts/sshoff.sh
+##LAPTOP##interval=10
+##LAPTOP##color=#3070ff
+##LAPTOP##signal=6
+
+##LAPTOP##[USERCOUNT]
+##LAPTOP##command=/usr/share/i3blocksScripts/users.sh
+##LAPTOP##interval=10
+##LAPTOP##color=#ff0000
+##LAPTOP##signal=6
+
 ##LAPTOP##[BTON]
 ##LAPTOP##command=/usr/share/i3blocksScripts/bton.sh
 ##LAPTOP##interval=10
-##LAPTOP##color=#ff0000
+##LAPTOP##color=#ff8000
 ##LAPTOP##signal=5
 
 ##LAPTOP##[BTOFF]
@@ -38,7 +56,6 @@ interval=10
 ##LAPTOP##interval=10
 ##LAPTOP##color=#3070ff
 ##LAPTOP##signal=5
-
 
 [OPAC]
 command=sh /usr/share/i3blocksScripts/opacityDisplay.sh

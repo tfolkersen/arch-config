@@ -21,23 +21,23 @@ interval=1
 command=date +"%F"
 interval=10
 
-##LAPTOP##[SSHON]
-##LAPTOP##command=/usr/share/i3blocksScripts/sshon.sh
-##LAPTOP##interval=10
-##LAPTOP##color=#ff0000
-##LAPTOP##signal=6
+[SSHON]
+command=/usr/share/i3blocksScripts/sshon.sh
+interval=10
+color=#ff0000
+signal=6
 
-##LAPTOP##[SSHOFF]
-##LAPTOP##command=/usr/share/i3blocksScripts/sshoff.sh
-##LAPTOP##interval=10
-##LAPTOP##color=#3070ff
-##LAPTOP##signal=6
+[SSHOFF]
+command=/usr/share/i3blocksScripts/sshoff.sh
+interval=10
+color=#3070ff
+signal=6
 
-##LAPTOP##[USERCOUNT]
-##LAPTOP##command=/usr/share/i3blocksScripts/users.sh
-##LAPTOP##interval=10
-##LAPTOP##color=#ff0000
-##LAPTOP##signal=6
+[USERCOUNT]
+command=/usr/share/i3blocksScripts/users.sh
+interval=10
+color=#ff0000
+signal=6
 
 ##LAPTOP##[BTON]
 ##LAPTOP##command=/usr/share/i3blocksScripts/bton.sh

@@ -18,3 +18,5 @@
 [] configure git
 
 [] configure firefox
+
+[] configure rwall service (not automated because this is jank)

@@ -1,0 +1,9 @@
+[Unit]
+Description=Change wallpaper
+
+[Service]
+Type=oneshot
+ExecStart=/home/user1/scripts/rwall-service.sh
+
+[Install]
+WantedBy=graphical-session.target

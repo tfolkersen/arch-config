@@ -1,0 +1,9 @@
+[Unit]
+Description=Start rwall.service
+
+[Timer]
+AccuracySec=1
+OnUnitActiveSec=2min
+
+[Install]
+WantedBy=timers.target graphical-session.target

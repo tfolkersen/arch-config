@@ -14,6 +14,6 @@ current=$(trunc "$current")
 
 delta=$(("$current" - "$last"))
 
-if [[ "$delta" -ge 1 ]] ; then
+if [[ "$delta" -ne 0 ]] || [[ "$1" == "now" ]] ; then
     DISPLAY=:0 feh --bg-fill -z $HOME/shared/wall/green
 fi

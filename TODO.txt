@@ -71,3 +71,5 @@ in config gtk3rc
 -- make "pipecheck" C program for bash scripting, or find the proper way to do head | tr | read
 
 -- exclude files from root directory (rwall service)
+
+-- consider using polybar

@@ -1,3 +1,14 @@
+[STAND]
+command=/usr/share/i3blocksScripts/stand.sh
+interval=30
+color=#ffff00
+
+[TIMER]
+command=/usr/share/i3blocksScripts/timer.sh $button
+interval=1
+color=#00ff00
+signal=4
+
 [MNTKEY]
 command=/usr/share/i3blocksScripts/mntkey.sh
 interval=25

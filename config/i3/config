@@ -83,6 +83,21 @@ bindsym $sup+$mod+KP_Add exec notify-send -t 2000 "ran ~/.xinputStuff" && sh ~/.
 bindsym $sup+$mod+bracketleft exec sh ~/.config/i3/kitty-opacity-dec.sh
 bindsym $sup+$mod+bracketright exec sh ~/.config/i3/kitty-opacity-inc.sh
 
+# start timer
+bindsym $sup+$mod+mod2+KP_5 exec echo "$((5 * 60))" > $HOME/.i3btimer && pkill --signal SIGRTMIN+4 i3blocks
+bindsym $sup+$mod+KP_Begin exec echo "$((5 * 60))" > $HOME/.i3btimer && pkill --signal SIGRTMIN+4 i3blocks
+
+bindsym $sup+$mod+mod2+KP_7 exec echo "$((10 * 60))" > $HOME/.i3btimer && pkill --signal SIGRTMIN+4 i3blocks
+bindsym $sup+$mod+KP_Home exec echo "$((10 * 60))" > $HOME/.i3btimer && pkill --signal SIGRTMIN+4 i3blocks
+
+bindsym $sup+$mod+mod2+KP_8 exec echo "$((15 * 60))" > $HOME/.i3btimer && pkill --signal SIGRTMIN+4 i3blocks
+bindsym $sup+$mod+KP_Up exec echo "$((15 * 60))" > $HOME/.i3btimer && pkill --signal SIGRTMIN+4 i3blocks
+
+bindsym $sup+$mod+mod2+KP_9 exec echo "$((20 * 60))" > $HOME/.i3btimer && pkill --signal SIGRTMIN+4 i3blocks
+bindsym $sup+$mod+KP_Prior exec echo "$((20 * 60))" > $HOME/.i3btimer && pkill --signal SIGRTMIN+4 i3blocks
+
+
+
 
 
 

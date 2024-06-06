@@ -70,7 +70,7 @@ pacman -S --noconfirm alsa-utils mesa\
  pinta ueberzug tumbler ffmpegthumbnailer\
  noto-fonts noto-fonts-cjk terminus-font ttf-liberation ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
  firefox vlc xfce4 xfce4-goodies xsel sxhkd pavucontrol pulseaudio dkms linux-headers gst-plugins-bad ripgrep\
- ethtool dhcpcd xorg-xmodmap fzf
+ ethtool dhcpcd xorg-xmodmap fzf mpv
 
 if [ $TYPESETTING == 1 ]; then
     pacman -S --noconfirm texlive-most texlive-lang biber

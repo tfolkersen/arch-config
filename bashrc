@@ -222,6 +222,21 @@ zzt() {
     done
 }
 
+stimer() {
+    if [[ -n "$1" ]] ; then
+        seconds=$(("$1"))
+
+        if [[ "$2" == "m" ]] ; then
+            seconds=$(("$seconds" * 60))
+        fi
+    else
+        seconds=$((5 * 60))
+    fi
+
+
+    echo "$seconds" > $HOME/.i3btimer
+    pkill --signal SIGRTMIN+4 i3blocks
+}
 
 
 # BEGIN_KITTY_SHELL_INTEGRATION

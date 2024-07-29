@@ -73,3 +73,5 @@ in config gtk3rc
 -- exclude files from root directory (rwall service)
 
 -- consider using polybar
+
+-- nvim "create line" command

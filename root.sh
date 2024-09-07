@@ -68,7 +68,7 @@ pacman -S --noconfirm alsa-utils mesa\
  xorg-server xorg-xinit xorg-xinput numlockx\
  i3-gaps i3status dmenu thunar dunst feh terminator kitty picom ranger okular maim i3blocks lxappearance\
  pinta ueberzug tumbler ffmpegthumbnailer\
- noto-fonts noto-fonts-cjk terminus-font ttf-liberation ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
+ noto-fonts noto-fonts-cjk noto-fonts-emoji terminus-font ttf-liberation ttf-roboto ttf-roboto-mono ttf-jetbrains-mono\
  firefox vlc xfce4 xfce4-goodies xsel sxhkd pavucontrol pulseaudio dkms linux-headers gst-plugins-bad ripgrep\
  ethtool dhcpcd xorg-xmodmap fzf mpv
 
